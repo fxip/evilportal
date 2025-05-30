@@ -17,12 +17,12 @@ Tested on Unleashed & Momentum firmware.
 
 ## 🔍 Previews
 
-### Google Mail Evil Portal
-![image](https://github.com/user-attachments/assets/0e263b6a-66ec-465a-8983-ea1c1a3adab1)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0e263b6a-66ec-465a-8983-ea1c1a3adab1" alt="Google Evil Portal" height="500px" />
+  <img src="https://github.com/user-attachments/assets/1141894a-b7ac-4cd3-870d-9a19350fc877" alt="Instagram Evil Portal" height="500px" />
+</p>
 
 
-### Instagram Evil Portal
-![image](https://github.com/user-attachments/assets/1141894a-b7ac-4cd3-870d-9a19350fc877)
 
 
 
